@@ -6,7 +6,8 @@ public class Main {
     public static final int PRIME_NUMBER = 3;
     public static final int REVERSE_NUMBER = 4;
     public static final int COUPON_NUMBER = 5;
-    public static final int EXIT = 6;
+    public static final int STOPWATCH_PROGRAM = 6;
+    public static final int EXIT = 7;
 
     public static void main(String[] args) {
         System.out.println("WELCOME TO LOGICAL PROGRAM");
@@ -18,7 +19,8 @@ public class Main {
             System.out.println("3] PRIME NUMBER PROGRAM");
             System.out.println("4] REVERSE NUMBER PROGRAM");
             System.out.println("5] COUPON NUMBER PROGRAM");
-            System.out.println("6] EXIT PROGRAM");
+            System.out.println("6] STOPWATCH PROGRAM");
+            System.out.println("7] EXIT PROGRAM");
             switch (scan.nextInt()) {
                 case FIBONACCI_SERIES:
                     logicalProgram.fibonacciSeris();
@@ -34,6 +36,9 @@ public class Main {
                     break;
                 case COUPON_NUMBER:
                     logicalProgram.couponNumber();
+                    break;
+                case STOPWATCH_PROGRAM:
+                    logicalProgram.stopwatchProgram();
                     break;
                 case EXIT:
                     System.exit(0);

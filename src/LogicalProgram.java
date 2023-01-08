@@ -56,16 +56,16 @@ public class LogicalProgram {
             }
         }
         if (primeNumber == 0) {
-            System.out.println(number+" is Prime Number");
+            System.out.println(number + " is Prime Number");
             return;
         }
-        System.out.println(number+"is not Prime Number");
+        System.out.println(number + "is not Prime Number");
     }
 
     public void reverseNumber() {
         program = "Upto 3 Digit Number";
         int number = userInterface(program);
-        int reverseNumber =0;
+        int reverseNumber = 0;
         int originalNumber = number;
         while (number != 0) {
             int remainder = number % 10;
@@ -77,8 +77,12 @@ public class LogicalProgram {
 
     public void couponNumber() {
         char[] chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789".toCharArray();
-        int max = 100000000;
+        int max = 100;
         int random = (int) (Math.random() * max);
+        for (int i = 0; i < 10; i++) {
+            random = (int) (Math.random() * max);
+            System.out.println(random);
+        }
         StringBuffer sb = new StringBuffer();
         while (random > 0) {
             sb.append(chars[random % chars.length]);
@@ -86,5 +90,22 @@ public class LogicalProgram {
         }
         String couponCode = sb.toString();
         System.out.println("Coupon Code: " + couponCode);
+    }
+
+    public void stopwatchProgram() {
+        long startTime = 0;
+        long endTime = 0;
+        double time = 0;
+        System.out.println("Start Stopwatch type 'y'");
+        char start = scan.next().charAt(0);
+        while (start == 'y'){
+            startTime = System.currentTimeMillis();
+            System.out.println("Type any Number to Stopwatch'");
+            start = scan.next().charAt(0);
+            endTime = System.currentTimeMillis();
+            break;
+        }
+        time = (endTime-startTime)/1000;
+        System.out.println("Elapsed Time :-" +time);
     }
 }
