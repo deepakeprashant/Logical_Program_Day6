@@ -61,4 +61,17 @@ public class LogicalProgram {
         }
         System.out.println(number+"is not Prime Number");
     }
+
+    public void reverseNumber() {
+        program = "Upto 3 Digit Number";
+        int number = userInterface(program);
+        int reverseNumber =0;
+        int originalNumber = number;
+        while (number != 0) {
+            int remainder = number % 10;
+            reverseNumber = reverseNumber * 10 + remainder;
+            number = number / 10;
+        }
+        System.out.println(originalNumber + " The reverse of the given number is: " + reverseNumber);
+    }
 }
